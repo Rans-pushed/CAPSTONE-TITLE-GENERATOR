@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>  
+  <meta charset="UTF-8">
+  <title>Capstone Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'><link rel="stylesheet" href="./assets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+       
+</head>
+<body>
+  <div id="particles-js"></div>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1><span class="main-color">Capstone </span>Title Generator</h1>
+      <p id="paragraph">It was Created by <a href="https://www.facebook.com/ranneytech/" target="_blank">Rans</a>. This project is designed to assist fellow students who are struggling to come up with unique and qualitative capstone titles. This generator aims to help you craft the perfect capstone title, easing the stress of brainstorming and ensuring you end up with a great title for your project. Also can i need little help subscribing to my youtube channel <a href="https://youtube.com/@itsrans?si=jcaUQdTWgeRNXC0S" target="_blank">Rany Boy Templado </a> and let's grow together in our choosen path. Thank you and Gobless.  </p> 
+        
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-xs-6">
+          <a id="next-quote" class="btn btn-lg btn-default btn-block" href="#">
+            <i class="fa fa-refresh generate-icon"></i>
+            <span class="generate-text">Generate</span>
+            <span class="loading-icon"></span> <!-- Loading spinner icon -->
+          </a>
+        </div>
+      </div>
+      
+      <div id="quote-box">
+        <p id="quote">This is the generated text.</p>
+        <button id="copy-button"><i class="fa fa-clipboard" aria-hidden="true"></i></button>   
+      </div>   
+      
+      <div class="row">       
+        <div class="col-xs-12">
+          <ul>
+            <li></li>
+            <li><a class="main-color" href="" target="_blank"></a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#next-quote").click(function(e) {
+    e.preventDefault(); // Prevent default behavior of the anchor tag
+    var $btn = $(this);
+    $btn.addClass('loading'); // Add loading class to the button
+    $('.generate-text').hide(); // Hide the "Generate" text
+    $('.generate-icon').hide(); // Hide the icon
+    $('.loading-icon').css('display', 'inline-block'); // Show loading spinner
+
+    // Simulate loading delay (you can replace this with your actual loading logic)
+    setTimeout(function() {
+      $btn.removeClass('loading'); // Remove loading class
+      $('.generate-text').show(); // Show the "Generate" text
+      $('.generate-icon').show(); // Show the icon
+      $('.loading-icon').css('display', 'none'); // Hide loading spinner
+    }, 300); // Change 2000 to the duration of your loading process
+  });
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src="./assets/particle.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
